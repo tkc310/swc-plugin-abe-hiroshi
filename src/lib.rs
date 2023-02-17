@@ -2,7 +2,6 @@ use swc_core::{
     ecma::{
         ast::{Program, CallExpr, Callee, Expr, MemberExpr, MemberProp, Lit, Str},
         visit::{VisitMut, as_folder, FoldWith},
-        atoms::{JsWord},
     },
     common::{DUMMY_SP},
     plugin::{plugin_transform, proxies::TransformPluginProgramMetadata}
@@ -23,10 +22,10 @@ impl VisitMut for TransformVisitor {
                                         Lit::Str(
                                             Str {
                                                 span: DUMMY_SP.into(),
-                                                value: JsWord::from("阿部寛").into(),
+                                                value: "阿部寛".into(),
                                                 raw: None.into(),
-                                            }
-                                        )
+                                            }.into()
+                                        ).into()
                                     ).into()
                                 );
                             }
