@@ -2,7 +2,7 @@ use swc_core::{
     ecma::{
         ast::{Program, CallExpr, Callee, Expr, MemberExpr, MemberProp, Lit, Str},
         visit::{VisitMut, as_folder, FoldWith},
-        atoms::{JsWord}
+        atoms::{JsWord},
     },
     common::{DUMMY_SP},
     plugin::{plugin_transform, proxies::TransformPluginProgramMetadata}
@@ -38,15 +38,4 @@ pub fn process_transform(program: Program, _metadata: TransformPluginProgramMeta
 }
 
 #[cfg(test)]
-mod tests {
-    use swc_core::ecma::transforms::testing::test;
-    use super::*;
-
-    test!(
-        Default::default(),
-        |_| as_folder(TransformVisitor),
-        boo,
-        r#"console.log('foo');"#,
-        r#"console.log("阿部寛");"#
-    );    
-}
+mod test;

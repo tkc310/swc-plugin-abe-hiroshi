@@ -8,10 +8,14 @@
     },
     "author": "tkc310",
     "license": "ISC",
-    "keywords": ["swc-plugin", "阿部寛"],
+    "keywords": [
+        "swc-plugin",
+        "阿部寛"
+    ],
     "main": "target/wasm32-wasi/release/swc.wasm",
     "files": [
-        "target/wasm32-wasi/release/swc.wasm"
+        "target/wasm32-wasi/release/swc.wasm",
+        "README.md"
     ],
     "scripts": {
         "prepublishOnly": "cargo build-wasi --release"
