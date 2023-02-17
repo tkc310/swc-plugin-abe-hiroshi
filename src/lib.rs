@@ -1,11 +1,14 @@
 use swc_core::{
     ecma::{
-        ast::{Program, CallExpr, Callee, Expr, MemberExpr, MemberProp, Lit, Str},
+        // ブルどしたwasmがエラーになるためswc_ecma_astを利用してみる
+        // ast::{Program, CallExpr, Callee, Expr, MemberExpr, MemberProp, Lit, Str},
         visit::{VisitMut, as_folder, FoldWith},
     },
     common::{DUMMY_SP},
     plugin::{plugin_transform, proxies::TransformPluginProgramMetadata}
 };
+// swc_core::ecma::astの代わりに使ってみる
+use swc_ecma_ast::*;
 
 pub struct TransformVisitor;
 

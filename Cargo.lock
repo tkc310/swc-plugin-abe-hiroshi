@@ -1286,6 +1286,7 @@ version = "0.1.0"
 dependencies = [
  "serde",
  "swc_core",
+ "swc_ecma_ast",
  "swc_ecma_parser",
  "swc_ecma_transforms_testing",
  "testing",
