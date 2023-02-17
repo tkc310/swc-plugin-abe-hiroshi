@@ -18,11 +18,17 @@ impl VisitMut for TransformVisitor {
                     if ident.sym == *"log" {
                         if let Expr::Ident(ident) = &**obj {
                             if ident.sym == *"console" {
-                                call.args[0].expr = Box::new(Expr::Lit(Lit::Str(Str {
-                                    span: DUMMY_SP,
-                                    value: JsWord::from("阿部寛"),
-                                    raw: None,
-                                })));
+                                call.args[0].expr = Box::new(
+                                    Expr::Lit(
+                                        Lit::Str(
+                                            Str {
+                                                span: DUMMY_SP.into(),
+                                                value: JsWord::from("阿部寛").into(),
+                                                raw: None.into(),
+                                            }
+                                        )
+                                    ).into()
+                                );
                             }
                         }
                     }
