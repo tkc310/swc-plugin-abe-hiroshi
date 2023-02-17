@@ -1,0 +1,19 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.fixAll.eslint",
+      "source.fixAll.stylelint"
+    ],
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.words": [
+        "hiroshi"
+    ]
+}
