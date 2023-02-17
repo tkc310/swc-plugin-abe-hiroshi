@@ -1,0 +1,11 @@
+{
+  "test": ".*\\.ts$",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript"
+    },
+    "experimental": {
+      "plugins": [["swc-plugin-abe-hiroshi", {}]]
+    }
+  }
+}
